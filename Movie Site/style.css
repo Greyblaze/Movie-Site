@@ -1,0 +1,1298 @@
+/*MOBILE*/
+@media all and (min-width: 0) and (max-width: 480px) {
+  * {
+    margin: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    margin: auto;
+    z-index: 1;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .logo-container {
+    display: block;
+  }
+
+  .logo {
+    font-size: 15px;
+    color: #3a8508;
+    font-weight: 800;
+    margin-left: 20px;
+  }
+
+  .menu-container {
+    display: none;
+  }
+
+  .profile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: auto 0 auto 100px;
+  }
+
+  .profile-text-container {
+    margin: 5px 15px;
+    cursor: pointer;
+    flex-basis: 33%;
+  }
+
+  .profile-text {
+    margin: auto 0;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .profile-picture {
+    flex-basis: 33%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  .toggle {
+    flex-basis: 33%;
+    width: 30px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 2px;
+  }
+
+  .toggle-icon {
+    color: goldenrod;
+  }
+
+  .toggle-ball {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+  }
+
+  .sidebar {
+    width: 40px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .container {
+    background-color: black;
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    color: white;
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  .content-container {
+    margin-left: 50px;
+  }
+
+  .featured-content {
+    height: 50vh;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .featured-content h2 {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+
+  .featured-title {
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  .featured-title img {
+    width: 100%;
+  }
+
+  .featured-desc {
+    width: 100%;
+    color: lightgray;
+    margin: 10px 0 10px 0;
+    font-size: 10px;
+  }
+
+  .featured-button {
+    background-color: #3a8508;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  .featured-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+
+  .movie-list-container hr {
+    width: 25%;
+    height: 2px;
+    background-color: #3a8508;
+    border: solid 1px #3a8508;
+    border-radius: 5%;
+    margin-top: 5px;
+  }
+
+  .movie-list-wrapper {
+    width: 100%;
+  }
+
+  .movie-list-title {
+    font-size: 15px;
+  }
+
+  .movie-list {
+    display: block;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    margin-top: 20px;
+  }
+
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1);
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .movie-list-item-title {
+    background-color: #151515;
+    color: white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-desc {
+    background-color: white;
+    color: #151515;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .movie-list-item-button:hover {
+    background-color: white;
+    color: #151515;
+    cursor: pointer;
+    border: solid 1px black;
+    font-weight: 700;
+  }
+
+  .container.active {
+    background-color: white;
+  }
+
+  .movie-list-title.active {
+    color: black;
+  }
+
+  .navbar-container.active {
+    background-color: white;
+
+    color: black;
+  }
+
+  .sidebar.active {
+    background-color: white;
+  }
+
+  .left-menu-icon.active {
+    color: black;
+  }
+
+  .toggle.active {
+    background-color: black;
+  }
+
+  .toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+  }
+}
+
+/*TABLET PORTRAIT*/
+@media all and (min-width: 481px) and (max-width: 768px) {
+  * {
+    margin: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .logo-container {
+    display: block;
+  }
+
+  .logo {
+    font-size: 17px;
+    color: #3a8508;
+    font-weight: 800;
+    margin-left: 20px;
+  }
+
+  .menu-container {
+    display: none;
+  }
+
+  .profile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: auto 0 auto 100px;
+  }
+
+  .profile-text-container {
+    margin: 5px 7px;
+    cursor: pointer;
+    flex-basis: 33%;
+  }
+
+  .profile-text {
+    margin: auto 0;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .profile-picture {
+    flex-basis: 33%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  .toggle {
+    flex-basis: 33%;
+    width: 30px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 2px;
+  }
+
+  .toggle-icon {
+    color: goldenrod;
+  }
+
+  .toggle-ball {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+  }
+
+  .sidebar {
+    width: 40px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .container {
+    background-color: black;
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    color: white;
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  .content-container {
+    margin-left: 50px;
+  }
+
+  .featured-content {
+    height: 50vh;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .featured-content h2 {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+
+  .featured-content p {
+    font-size: 12px;
+    width: 80%;
+    line-height: 1.5;
+  }
+
+  .featured-title {
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  .featured-title img {
+    width: 100%;
+  }
+
+  .featured-desc {
+    width: 100%;
+    color: lightgray;
+    margin: 10px 0 10px 0;
+    font-size: 10px;
+  }
+
+  .featured-button {
+    background-color: #3a8508;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  .featured-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+
+  .movie-list-container {
+    margin-top: 30px;
+  }
+
+  .movie-list-container hr {
+    width: 10%;
+    height: 2px;
+    background-color: #3a8508;
+    border: solid 1px #3a8508;
+    border-radius: 5%;
+    margin-top: 5px;
+  }
+
+  .movie-list-wrapper {
+    width: 100%;
+  }
+
+  .movie-list-title {
+    font-size: 18px;
+  }
+
+  .movie-list {
+    display: block;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    margin-top: 20px;
+  }
+
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.1);
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .movie-list-item-title {
+    background-color: #151515;
+    color: white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-desc {
+    background-color: white;
+    color: #151515;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .movie-list-item-button:hover {
+    background-color: white;
+    color: #151515;
+    cursor: pointer;
+    border: solid 1px black;
+    font-weight: 700;
+  }
+
+  .container.active {
+    background-color: white;
+  }
+
+  .movie-list-title.active {
+    color: black;
+  }
+
+  .navbar-container.active {
+    background-color: white;
+
+    color: black;
+  }
+
+  .sidebar.active {
+    background-color: white;
+  }
+
+  .left-menu-icon.active {
+    color: black;
+  }
+
+  .toggle.active {
+    background-color: black;
+  }
+
+  .toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+/*TABLET LANDSCAPE*/
+@media all and (min-width: 769px) and (max-width: 1023px) {
+  * {
+    margin: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    z-index: 1;
+    margin: auto;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .logo-container {
+    display: block;
+  }
+
+  .logo {
+    font-size: 15px;
+    color: #3a8508;
+    font-weight: 800;
+    margin-left: 20px;
+  }
+
+  .menu-container {
+    display: flex;
+  }
+
+  .menu-list {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .menu-list-item {
+    margin-right: 30px;
+  }
+
+  .menu-list-item.active {
+    font-weight: bold;
+  }
+
+  .menu-list li {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .profile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: auto 0 auto 100px;
+  }
+
+  .profile-text-container {
+    margin: 5px 7px;
+    cursor: pointer;
+    flex-basis: 33%;
+  }
+
+  .profile-text {
+    margin: auto 0;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .profile-picture {
+    flex-basis: 33%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  .toggle {
+    flex-basis: 33%;
+    width: 30px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 2px;
+  }
+
+  .toggle-icon {
+    color: goldenrod;
+  }
+
+  .toggle-ball {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+  }
+
+  .sidebar {
+    width: 40px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .container {
+    background-color: black;
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    color: white;
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  .content-container {
+    margin-left: 50px;
+  }
+
+  .featured-content {
+    height: 50vh;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .featured-content h2 {
+    margin-top: 1rem;
+    font-size: 25px;
+  }
+
+  .featured-content p {
+    font-size: 12px;
+    width: 80%;
+    line-height: 1.5;
+  }
+
+  .featured-title {
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  .featured-title img {
+    width: 100%;
+  }
+
+  .featured-desc {
+    width: 100%;
+    color: lightgray;
+    margin: 10px 0 10px 0;
+    font-size: 10px;
+  }
+
+  .featured-button {
+    background-color: #3a8508;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  .featured-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+
+  .movie-list-container {
+    margin-top: 50px;
+  }
+
+  .movie-list-container hr {
+    width: 10%;
+    height: 2px;
+    background-color: #3a8508;
+    border: solid 1px #3a8508;
+    border-radius: 5%;
+    margin-top: 5px;
+  }
+
+  .movie-list-wrapper {
+    width: 100%;
+  }
+
+  .movie-list-title {
+    font-size: 20px;
+  }
+
+  .movie-list {
+    display: block;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    margin-top: 20px;
+  }
+
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.1);
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .movie-list-item-title {
+    background-color: #151515;
+    color: white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-desc {
+    background-color: white;
+    color: #151515;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .movie-list-item-button:hover {
+    background-color: white;
+    color: #151515;
+    cursor: pointer;
+    border: solid 1px black;
+    font-weight: 700;
+  }
+
+  .container.active {
+    background-color: white;
+  }
+
+  .movie-list-title.active {
+    color: black;
+  }
+
+  .navbar-container.active {
+    background-color: white;
+
+    color: black;
+  }
+
+  .sidebar.active {
+    background-color: white;
+  }
+
+  .left-menu-icon.active {
+    color: black;
+  }
+
+  .toggle.active {
+    background-color: black;
+  }
+
+  .toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+  }
+
+  .arrow {
+    display: none;
+  } */
+}
+
+/*DESKTOP*/
+@media all and (min-width: 1024px) {
+  * {
+    margin: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+  }
+
+  .logo-container {
+    flex: 1;
+  }
+
+  .logo {
+    font-size: 30px;
+    color: #3a8508;
+    font-weight: 800;
+  }
+
+  .menu-container {
+    flex: 1;
+  }
+
+  .menu-list {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .menu-list-item {
+    margin-right: 30px;
+  }
+
+  .menu-list-item.active {
+    font-weight: bold;
+  }
+
+  .menu-list li {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .profile-text-container {
+    margin: 0 20px;
+    cursor: pointer;
+  }
+
+  .profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .toggle-icon {
+    color: goldenrod;
+  }
+
+  .toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+  }
+
+  .sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .left-menu-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+  }
+
+  .content-container {
+    margin-left: 50px;
+  }
+
+  .featured-content {
+    height: 50vh;
+    padding: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+
+  .featured-content h2 {
+    margin-top: 1rem;
+  }
+
+  .featured-title {
+    width: 200px;
+    border-radius: 7px;
+  }
+
+  .featured-desc {
+    width: 500px;
+    color: lightgray;
+    margin: 15px 0 30px 0;
+  }
+
+  .featured-button {
+    background-color: #3a8508;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+  }
+
+  .featured-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  .movie-list-container {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .movie-list-container hr {
+    width: 7%;
+    height: 2px;
+    background-color: #3a8508;
+    border: solid 1px #3a8508;
+    border-radius: 5%;
+    margin-top: 5px;
+  }
+
+  .movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .movie-list-title {
+    font-size: 25px;
+  }
+
+  .movie-list {
+    display: flex;
+    align-items: center;
+    height: 250px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+  }
+
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+  }
+
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+  }
+
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .movie-list-item-title {
+    background-color: #151515;
+    color: white;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-desc {
+    background-color: white;
+    color: #151515;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .movie-list-item-button:hover {
+    background-color: white;
+    color: #151515;
+    cursor: pointer;
+    border: solid 1px black;
+    font-weight: 700;
+  }
+
+  .arrow {
+    font-size: 100px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: rgb(102, 101, 101);
+    opacity: 0.5;
+    cursor: pointer;
+    font-weight: 900;
+  }
+
+  .container.active {
+    background-color: white;
+  }
+
+  .movie-list-title.active {
+    color: black;
+  }
+
+  .navbar-container.active {
+    background-color: white;
+
+    color: black;
+  }
+
+  .sidebar.active {
+    background-color: white;
+  }
+
+  .left-menu-icon.active {
+    color: black;
+  }
+
+  .toggle.active {
+    background-color: black;
+  }
+
+  .toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+  }
+}
